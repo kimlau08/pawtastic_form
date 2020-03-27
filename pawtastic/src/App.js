@@ -7,7 +7,7 @@ export default class App extends Component {
 
    }
 
-   redner() {
+   render() {
      return (
       <div className="App">
 
