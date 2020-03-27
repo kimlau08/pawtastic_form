@@ -1,13 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
-}
+export default class App extends Component {
+   constructor(props) {
+     super(props);
 
-export default App;
+   }
+
+   redner() {
+     return (
+      <div className="App">
+
+      </div>
+     )
+   }
+}
