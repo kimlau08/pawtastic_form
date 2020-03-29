@@ -10,8 +10,9 @@ import concentricGroupImg from '../assets/concentricGroup.png';
 export default class LeftNav extends Component {
     constructor(props) {
       super(props);
-        this.state={navPosition: 1}; 
+      this.state={menuSelection: ""};
 
+      this.handleMouseOver=this.handleMouseOver.bind(this);
     }
 
     handleMouseOver(e) {
@@ -22,6 +23,9 @@ export default class LeftNav extends Component {
 
         switch (e.target.id) {
             case "menuItem0": 
+
+                this.setState({menuSelection: "menuItem0"})
+
                 document.getElementById("menuItem1").style.color="#9597A6";
                 document.getElementById("menuItem2").style.color="#9597A6";
                 document.getElementById("menuItem3").style.color="#9597A6";
@@ -32,6 +36,9 @@ export default class LeftNav extends Component {
                 document.getElementById("CC3").style.zIndex=-1;
                 break;
             case "menuItem1": 
+
+                this.setState({menuSelection: "menuItem1"})
+
                 document.getElementById("menuItem0").style.color="#9597A6";
                 document.getElementById("menuItem2").style.color="#9597A6";
                 document.getElementById("menuItem3").style.color="#9597A6";
@@ -42,6 +49,9 @@ export default class LeftNav extends Component {
                 document.getElementById("CC3").style.zIndex=-1;
                 break;
             case "menuItem2": 
+
+                this.setState({menuSelection: "menuItem2"})
+
                 document.getElementById("menuItem0").style.color="#9597A6";
                 document.getElementById("menuItem1").style.color="#9597A6";
                 document.getElementById("menuItem3").style.color="#9597A6";
@@ -52,6 +62,9 @@ export default class LeftNav extends Component {
                 document.getElementById("CC3").style.zIndex=-1;
                 break;
             case "menuItem3": 
+            
+                this.setState({menuSelection: "menuItem3"})
+
                 document.getElementById("menuItem0").style.color="#9597A6";
                 document.getElementById("menuItem1").style.color="#9597A6";
                 document.getElementById("menuItem2").style.color="#9597A6";
