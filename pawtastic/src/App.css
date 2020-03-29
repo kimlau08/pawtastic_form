@@ -1,0 +1,124 @@
+App {
+/* border: purple; */
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  font-size: 20px;
+}
+.menuItems:link, .menuItems:visited {
+  text-decoration: none;
+}
+
+
+.LefNavContainer {
+
+/* border: solid purple; */
+  width: 40%;
+  min-width: 500px;
+}
+
+  .dogImgBox {
+
+/* border: solid green; */
+
+    width: 100%;
+    position: relative;
+  }
+    .dogImg {
+      width: 100%;
+    }
+
+    .logoBox {
+      position: absolute;
+      top: 10%;
+      left: 25%; 
+      width: 75%;
+
+      max-height: 30px;
+      display: flex;
+      flex-direction: row;
+
+/* border: solid yellow; */
+    }
+
+      .logoImg {
+        width: 30px;
+        height: 30px;
+      }
+
+      .logoTxt {
+        position: relative;
+        top: -8px;
+        left: 10px;
+
+        font-family: sans-serif;
+        color: white;
+      }
+
+    .navBarBox {
+      position: absolute;
+      top: 30%;
+      left: 25%; 
+
+      display: flex;
+      flex-direction: row;
+      width: 40%;
+      height: 30%;
+
+/* border: solid yellow; */
+    }
+
+      .verticalBubbleBar{
+        height: 100%;
+  /* border: solid lime; */
+
+        margin-left: 5px;
+      }
+
+      .concentricGroupBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        position: absolute;
+        left: -3px;
+      }
+
+      #CC0, #CC1, #CC2, #CC3 {
+        z-index: -1;  
+      }
+
+      .navBar {
+
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        font-size: 16px;
+        margin-left: 15px;
+
+  /* border: solid red; */
+      }
+
+        #menuItem0, #menuItem1, #menuItem2, #menuItem3 {
+          color: #9597A6;
+        }
+
+    .exitLink {
+      position: absolute;
+      left: 25%;
+      bottom: 10px;
+      width: 100%;
+      font-size: 16px;
+    }
