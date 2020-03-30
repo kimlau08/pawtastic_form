@@ -59,7 +59,7 @@ export default class RightForm extends Component {
                         <input className="quadSelection" type="button" value="Option 1" onChange={this.handleChange} />
                         <input className="quadSelection" type="button" value="Option 2" onChange={this.handleChange} />
                         <input className="quadSelection" type="button" value="Option 3" onChange={this.handleChange} />
-                        <input className="quadSelection" type="button" value="Option 4" onChange={this.handleChange} />
+                        <input className="quadSelection" type="button" value="Option4" onChange={this.handleChange} />
                     </label>
 
                     <button className="backButton">Back</button>

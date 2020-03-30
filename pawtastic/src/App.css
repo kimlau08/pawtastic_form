@@ -145,6 +145,7 @@ border: solid olive;
         .quadSelection {
           width: 24%;
           font-size: 16px;
+          
         }
     
     .backButton {
@@ -153,6 +154,8 @@ border: solid olive;
 
       width: 70px;
       height: 40px;
+      border: solid 1px #E6DBDA;
+      border-radius: 28px
     }
 
 
