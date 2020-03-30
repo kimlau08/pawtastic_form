@@ -153,9 +153,11 @@ border: solid olive;
       grid-row: 6;
       margin-left: 20px;
 
+      color: #545871;
+
       width: 100px;
       height: 40px;
-      border: solid 1px #B8817D;
+      border: solid 1px #545871;
       border-radius: 28px
     }
 
