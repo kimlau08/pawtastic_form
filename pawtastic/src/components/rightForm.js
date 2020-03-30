@@ -42,10 +42,12 @@ export default class RightForm extends Component {
                         <input className="textInput" type="text" value={this.state.birthday} onChange={this.handleChange} />
                     </label>
 
-                    <label className="genderSelectionBox">Gender
-                    <br />
-                    <input className="binarySelection" type="button" name="gender" value="Female" onChange={this.handleChange} />
-                    <input className="binarySelection" type="button" name="gender" value="Male" onChange={this.handleChange} />
+                    <label className="genderSelectionBox">
+                        Gender<br />
+                        <div className="genderButtonGroup">
+                            <input className="binarySelection" type="button" name="gender" value="Female" onChange={this.handleChange} />
+                            <input className="binarySelection" type="button" name="gender" value="Male" onChange={this.handleChange} />
+                        </div>
                     </label>
 
                     <label className="spayedSelectionBox">

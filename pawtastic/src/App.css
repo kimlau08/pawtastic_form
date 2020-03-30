@@ -118,10 +118,22 @@ border: solid olive;
 
 border: solid olive;     
       }   
-        .binarySelection {
-          width: 50%;
-          font-size: 16px;
+
+        .genderButtonGroup {
+          padding: 4px;
+          border: solid 1px #E6DBDA;
+          border-radius: 5px;
+
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
         }
+
+
+          .binarySelection {
+            width: 50%;
+            font-size: 16px;
+          }
 
 
       .spayedSelectionBox {
