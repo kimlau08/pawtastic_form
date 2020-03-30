@@ -28,10 +28,10 @@ export default class RightForm extends Component {
                         Name<br />
                         <input className="textInput" type="text" value={this.state.name} onChange={this.handleChange} />
                     </label>
-                    <label className="uploadPhotoBox">
+                    <div className="uploadPhotoBox">
                        <img className="cameraImg" src={cameraCircleImg} />
-                       Upload a photo
-                    </label>
+                       <p className="uploadLabel">Upload a photo</p>
+                    </div>
                     <label className="breedInputBox">
                         Breed<br />
                         <input className="textInput" type="text" value={this.state.breed} onChange={this.handleChange} />
