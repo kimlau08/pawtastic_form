@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../App.css';
 
+import cameraCircleImg from '../assets/cameraCircle.png'
+
 
 export default class RightForm extends Component {
     constructor(props) {
@@ -11,9 +13,9 @@ export default class RightForm extends Component {
     }
 
 
-                handleChange(event) {
-                    this.setState({value: event.target.value}); //update the value state when the form is submitted
-                }
+    handleChange(event) {
+        this.setState({value: event.target.value}); //update the value state when the form is submitted
+    }
 
 
     render() {
@@ -26,7 +28,10 @@ export default class RightForm extends Component {
                         Name<br />
                         <input className="textInput" type="text" value={this.state.name} onChange={this.handleChange} />
                     </label>
-
+                    <label className="uploadPhotoBox">
+                       <img className="cameraImg" src={cameraCircleImg} />
+                       Upload a photo
+                    </label>
                     <label className="breedInputBox">
                         Breed<br />
                         <input className="textInput" type="text" value={this.state.breed} onChange={this.handleChange} />
@@ -50,11 +55,11 @@ export default class RightForm extends Component {
                     </label>
 
                     <label className="weightSelectionBox">
-                        Spayed or Neutered<br />
-                        <input className="quadSelection" type="text" value={this.state.weight} onChange={this.handleChange} />
-                        <input className="quadSelection" type="text" value={this.state.weight} onChange={this.handleChange} />
-                        <input className="quadSelection" type="text" value={this.state.weight} onChange={this.handleChange} />
-                        <input className="quadSelection" type="text" value={this.state.weight} onChange={this.handleChange} />
+                        Weight<br />
+                        <input className="quadSelection" type="button" value={this.state.weight} onChange={this.handleChange} />
+                        <input className="quadSelection" type="button" value={this.state.weight} onChange={this.handleChange} />
+                        <input className="quadSelection" type="button" value={this.state.weight} onChange={this.handleChange} />
+                        <input className="quadSelection" type="button" value={this.state.weight} onChange={this.handleChange} />
                     </label>
 
                     <button className="backButton">Back</button>
