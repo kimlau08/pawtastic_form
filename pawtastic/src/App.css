@@ -146,6 +146,13 @@ a {
           justify-content: space-evenly;
         }
 
+          .binarySelection, .quadSelection {
+            border-radius: 3px;
+            border-style: solid;
+
+            background-color: #EBD0CE;
+            color: #545871;
+          }
 
           .binarySelection {
             width: 50%;
