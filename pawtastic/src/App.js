@@ -12,10 +12,10 @@ export default class App extends Component {
    render() {
      return (
       <div className="App">
-
-        <LeftNav />
-        <RightForm />
-
+        <div className="container">
+          <LeftNav />
+          <RightForm />
+        </div>
       </div>
      )
    }
