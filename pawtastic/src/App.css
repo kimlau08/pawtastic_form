@@ -60,6 +60,11 @@ border: solid blue;
         
       }
 
+        .textInput {
+          border: solid 1px #E6DBDA;
+          border-radius: 5px;
+        }
+
       .uploadPhotoBox {
         grid-column: 3/5;
         grid-row: 1;
