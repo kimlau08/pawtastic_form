@@ -56,10 +56,12 @@ export default class RightForm extends Component {
 
                     <label className="weightSelectionBox">
                         Weight<br />
-                        <input className="quadSelection" type="button" value="Option 1" onChange={this.handleChange} />
-                        <input className="quadSelection" type="button" value="Option 2" onChange={this.handleChange} />
-                        <input className="quadSelection" type="button" value="Option 3" onChange={this.handleChange} />
-                        <input className="quadSelection" type="button" value="Option4" onChange={this.handleChange} />
+                        <div className="weightButtonGroup">
+                            <input className="quadSelection" type="button" value="Option 1" onChange={this.handleChange} />
+                            <input className="quadSelection" type="button" value="Option 2" onChange={this.handleChange} />
+                            <input className="quadSelection" type="button" value="Option 3" onChange={this.handleChange} />
+                            <input className="quadSelection" type="button" value="Option4" onChange={this.handleChange} />
+                        </div>
                     </label>
 
                     <button className="backButton">Back</button>

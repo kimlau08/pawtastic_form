@@ -142,11 +142,18 @@ border: solid olive;
 border: solid olive;     
       }
 
-        .quadSelection {
-          width: 24%;
-          font-size: 16px;
-          
+        .weightButtonGroup {
+          width: 100%;
+          padding: 4px;
+          border: solid 1px #E6DBDA;
+          border-radius: 5px;
         }
+
+          .quadSelection {
+            width: 24%;
+            font-size: 16px;
+            
+          }
     
     .backButton {
       grid-column: 1/2;
