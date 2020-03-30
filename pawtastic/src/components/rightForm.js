@@ -50,8 +50,10 @@ export default class RightForm extends Component {
 
                     <label className="spayedSelectionBox">
                         Spayed or Neutered<br />
-                        <input className="binarySelection" type="button" value="Yes" onChange={this.handleChange} />
-                        <input className="binarySelection" type="button" value="No" onChange={this.handleChange} />
+                        <div className="spayedYesNoGroup">
+                            <input className="binarySelection" type="button" value="Yes" onChange={this.handleChange} />
+                            <input className="binarySelection" type="button" value="No" onChange={this.handleChange} />
+                        </div>
                     </label>
 
                     <label className="weightSelectionBox">

@@ -133,6 +133,19 @@ border: solid olive;
 border: solid olive;     
       }
 
+        .spayedYesNoGroup {
+          width: 100%;
+          padding: 4px;
+          border: solid 1px #E6DBDA;
+          border-radius: 5px;
+
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+
+        }
+
+
       .weightSelectionBox {
         grid-column: 1/5;
         grid-row: 4;
@@ -147,6 +160,10 @@ border: solid olive;
           padding: 4px;
           border: solid 1px #E6DBDA;
           border-radius: 5px;
+
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
         }
 
           .quadSelection {
