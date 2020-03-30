@@ -8,8 +8,8 @@ export default class RightForm extends Component {
     constructor(props) {
         super(props);
  
-        this.state={name: "", breed: "", imgFilePath: "", birthday: "", gender: "Female", 
-                    spayed: "Yes", weight: "Option1"}
+        this.state={name: "", imgFilePath: "", breed: "",  birthday: "", gender: "", 
+                    spayed: "", weight: ""}
 
         this.handleNameChange=this.handleNameChange.bind(this);
         this.handleImagePathChange=this.handleImagePathChange.bind(this);
@@ -31,22 +31,9 @@ export default class RightForm extends Component {
         this.setState({breed: event.target.value}); //update the value state when the form is submitted
     }
 
-validateDateFormt(event) {
-const dateFmtRegex=/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;   //digit # in DD/MM/YYY
-const dateValue=event.target.value;
-if (dateValue != '') {
-    const regexSegments=dateValue.match(dateFmtRegex);
-    if (!regexSegments) {
-        alert(`Invalid date format`);
-        return;
-    }
-}
-}
-
     handleBDateChange(event) {
         this.setState({birthday: event.target.value}); //update the value state when the form is submitted
     }
-
     handleGenderClick(event) {
         this.setState({gender: event.target.value});
     }
@@ -84,7 +71,7 @@ if (dateValue != '') {
 
                     <label className="birthdayInputBox">
                         Birthday<br />
-                        <input className="textInput" type="text" value={this.state.birthday} placeholder="MM/DD/YYYY" onChange={this.handleBDateChange} />
+                        <input className="textInput" type="date" value={this.state.birthday} placeholder="MM/DD/YYYY" onChange={this.handleBDateChange} />
                     </label>
 
                     <label className="genderSelectionBox">

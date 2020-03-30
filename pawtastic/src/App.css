@@ -136,6 +136,12 @@ a {
 /* border: solid olive;         */
       }
 
+      /* html5 date picker styling */
+      ::-webkit-datetime-edit-text { color:#EBD0CE; }
+      ::-webkit-datetime-edit-month-field { color: #EBD0CE; }
+      ::-webkit-datetime-edit-day-field { color: #EBD0CE; }
+      ::-webkit-datetime-edit-year-field { color: #EBD0CE; }
+
       .genderSelectionBox {
         grid-column: 1/3;
         grid-row: 3;
@@ -164,6 +170,7 @@ a {
             color: #545871;
           }
 
+          /* Make button color change stay upon clicking using :focus selector */
           /* Toggle buttons implemented using :focus and ~ sibling selectors */
           .binarySelection:focus {
             background-color: #EBD0CE;
@@ -225,7 +232,8 @@ a {
             font-size: 16px;
             background-color: none;
           }
-
+          
+          /* Make button color change stay upon clicking using :focus selector */
           /* Toggle buttons implemented using :focus and ~ sibling selectors */
           .quadSelection:focus {
             background-color: #EBD0CE;
