@@ -47,9 +47,11 @@ if (dateValue != '') {
 
     handleGenderClick(event) {
         this.setState({gender: event.target.value});
-// event.target.style.backgroundColor="#EBD0CE";
-
     }
+    handleSpayedClick(event) {
+        this.setState({spayed: event.target.value});
+    }
+
 
 
     render() {
