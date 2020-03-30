@@ -1,5 +1,4 @@
 
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -39,13 +38,13 @@ border: solid green;
     }
 
     .inputContainer {
-      margin: 0 auto;
+      margin: 10px auto;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 4fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 
       width: 80%;
-      height: 80%;
+      height: 60%;
 
 border: solid blue;
     }
@@ -53,19 +52,67 @@ border: solid blue;
       .nameInputBox {
         grid-column: 1/3;
         grid-row: 1;
+
+        align-self: center;
       }
 
       .breedInputBox {
-        grid-column: 3/5;
-        grid-row: 1;
+        grid-column: 1/3;
+        grid-row: 2;
+        
+        align-self: center;
+    
+border: solid olive;     
       }
       
       .birthdayInputBox {
-        grid-column: 1/3;
-        grid-row: 3;
+        grid-column: 3/5;
+        grid-row: 2;
+        align-self: center;
+    
+border: solid olive;        
       }
 
+      .genderSelectionBox {
+        grid-column: 1/3;
+        grid-row: 3;
+        align-self: center;
+    
 
+border: solid olive;     
+      }   
+        .binarySelection {
+          width: 50%;
+        }
+
+
+      .spayedSelectionBox {
+        grid-column: 3/5;
+        grid-row: 3;
+        align-self: center;
+    
+border: solid olive;     
+      }
+
+      .weightSelectionBox {
+        grid-column: 1/5;
+        grid-row: 4;
+        align-self: center;
+    
+border: solid olive;     
+      }
+
+        .quadSelection {
+          width: 24%;
+        }
+    
+    .backButton {
+      grid-column: 1/2;
+      grid-row: 6;
+
+      width: 70px;
+      height: 40px;
+    }
 
 
   /***************************************************************
