@@ -18,6 +18,8 @@ export default class RightForm extends Component {
         this.handleGenderClick=this.handleGenderClick.bind(this);
         this.handleSpayedClick=this.handleSpayedClick.bind(this);
         this.handleWeightOptionClick=this.handleWeightOptionClick.bind(this);
+        this.switchToDatePicker=this.switchToDatePicker.bind(this);
+        this.switchToTextType=this.switchToTextType.bind(this);
     }
 
 
@@ -44,6 +46,12 @@ export default class RightForm extends Component {
         this.setState({weight: event.target.value});
     }
 
+    switchToDatePicker(event) {
+        event.target.type="date";
+    }
+    switchToTextType(event) {
+        event.target.type="text";
+    }
 
 
     render() {
@@ -71,7 +79,7 @@ export default class RightForm extends Component {
 
                     <label className="birthdayInputBox">
                         Birthday<br />
-                        <input className="textInput" type="date" value={this.state.birthday} placeholder="MM/DD/YYYY" onChange={this.handleBDateChange} />
+                        <input className="textInput" type="text" value={this.state.birthday} placeholder="MM/DD/YYYY" onMouseEnter={this.switchToDatePicker} onMouseLeave={this.switchToTextType} onChange={this.handleBDateChange} />
                     </label>
 
                     <label className="genderSelectionBox">
