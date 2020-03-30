@@ -44,22 +44,22 @@ export default class RightForm extends Component {
 
                     <label className="genderSelectionBox">Gender
                     <br />
-                    <input className="binarySelection" type="button" name="gender" value={this.state.gender} onChange={this.handleChange} />
-                    <input className="binarySelection" type="button" name="gender" value={this.state.gender} onChange={this.handleChange} />
+                    <input className="binarySelection" type="button" name="gender" value="Female" onChange={this.handleChange} />
+                    <input className="binarySelection" type="button" name="gender" value="Male" onChange={this.handleChange} />
                     </label>
 
                     <label className="spayedSelectionBox">
                         Spayed or Neutered<br />
-                        <input className="binarySelection" type="button" value={this.state.spayed} onChange={this.handleChange} />
-                        <input className="binarySelection" type="button" value={this.state.spayed} onChange={this.handleChange} />
+                        <input className="binarySelection" type="button" value="Yes" onChange={this.handleChange} />
+                        <input className="binarySelection" type="button" value="No" onChange={this.handleChange} />
                     </label>
 
                     <label className="weightSelectionBox">
                         Weight<br />
-                        <input className="quadSelection" type="button" value={this.state.weight} onChange={this.handleChange} />
-                        <input className="quadSelection" type="button" value={this.state.weight} onChange={this.handleChange} />
-                        <input className="quadSelection" type="button" value={this.state.weight} onChange={this.handleChange} />
-                        <input className="quadSelection" type="button" value={this.state.weight} onChange={this.handleChange} />
+                        <input className="quadSelection" type="button" value="Option 1" onChange={this.handleChange} />
+                        <input className="quadSelection" type="button" value="Option 2" onChange={this.handleChange} />
+                        <input className="quadSelection" type="button" value="Option 3" onChange={this.handleChange} />
+                        <input className="quadSelection" type="button" value="Option 4" onChange={this.handleChange} />
                     </label>
 
                     <button className="backButton">Back</button>
