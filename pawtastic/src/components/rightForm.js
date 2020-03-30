@@ -8,13 +8,47 @@ export default class RightForm extends Component {
     constructor(props) {
         super(props);
  
-        this.state={name: "", breed: "", birthday: "", gender: "Female", 
+        this.state={name: "", breed: "", imgFilePath: "", birthday: "", gender: "Female", 
                     spayed: "Yes", weight: "Option1"}
+
+        this.handleNameChange=this.handleNameChange.bind(this);
+        this.handleImagePathChange=this.handleImagePathChange.bind(this);
+        this.handleBreedChange=this.handleBreedChange.bind(this);
+        this.handleBDateChange=this.handleBDateChange.bind(this);
+        this.handleGenderClick=this.handleGenderClick.bind(this);
     }
 
 
-    handleChange(event) {
-        this.setState({value: event.target.value}); //update the value state when the form is submitted
+    handleNameChange(event) {
+        this.setState({name: event.target.value}); //update the value state when the field is changed
+    }
+    handleImagePathChange(event) {
+        this.setState({imgFilePath: event.target.value}); //update pathname after picking file
+    }
+    handleBreedChange(event) {
+        this.setState({breed: event.target.value}); //update the value state when the form is submitted
+    }
+
+validateDateFormt(event) {
+const dateFmtRegex=/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;   //digit # in DD/MM/YYY
+const dateValue=event.target.value;
+if (dateValue != '') {
+    const regexSegments=dateValue.match(dateFmtRegex);
+    if (!regexSegments) {
+        alert(`Invalid date format`);
+        return;
+    }
+}
+}
+
+    handleBDateChange(event) {
+        this.setState({birthday: event.target.value}); //update the value state when the form is submitted
+    }
+
+    handleGenderClick(event) {
+        this.setState({gender: event.target.value});
+// event.target.style.backgroundColor="#EBD0CE";
+
     }
 
 
@@ -24,29 +58,34 @@ export default class RightForm extends Component {
                 <h2 className="petBasicsTitle">Yay, we love dogs! Give us the basics about your pup.</h2><br /><br />
 
                 <div className="inputContainer">
+
                     <label className="nameInputBox">
                         Name<br />
-                        <input className="textInput" type="text" value={this.state.name} placeholder="Pet’s name" onChange={this.handleChange} />
+                        <input className="textInput" type="text" value={this.state.name} placeholder="Pet’s name" onChange={this.handleNameChange} />
                     </label>
+
                     <div className="uploadPhotoBox">
                        <img className="cameraImg" src={cameraCircleImg} />
-                       <p className="uploadLabel">Upload a photo</p>
+                        <label className="uploadLabel" for="filePickerInput">Upload a photo</label>
+                        <input id="filePickerInput" type="file" value={this.state.imgFilePath}  onChange={this.handleImagePathChange} />
                     </div>
+
                     <label className="breedInputBox">
                         Breed<br />
-                        <input className="textInput" type="text" value={this.state.breed} placeholder="Pet’s breed" onChange={this.handleChange} />
+                        <input className="textInput" type="text" value={this.state.breed} placeholder="Pet’s breed" onChange={this.handleBreedChange} />
                     </label>
 
                     <label className="birthdayInputBox">
                         Birthday<br />
-                        <input className="textInput" type="text" value={this.state.birthday} placeholder="MM/DD/YYYY" onChange={this.handleChange} />
+                        <input className="textInput" type="text" value={this.state.birthday} placeholder="MM/DD/YYYY" onChange={this.handleBDateChange} />
                     </label>
 
                     <label className="genderSelectionBox">
                         Gender<br />
                         <div className="genderButtonGroup">
-                            <input className="binarySelection" type="button" name="gender" value="Female" onChange={this.handleChange} />
-                            <input className="binarySelection" type="button" name="gender" value="Male" onChange={this.handleChange} />
+                            {/* Use input type=button instead of button tag to make color change stay after clicking */}
+                            <input className="binarySelection" type="button" name="gender" value="Female" onClick={this.handleGenderClick} />
+                            <input className="binarySelection" type="button" name="gender" value="Male" onClick={this.handleGenderClick} />
                         </div>
                     </label>
 

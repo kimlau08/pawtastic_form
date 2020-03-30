@@ -92,18 +92,28 @@ a {
 /* border: solid olive;         */
 
       }
+
+        #filePickerInput {
+          width: 0.1px;
+          height: 0.1px;
+          opacity: 0;
+          overflow: hidden;
+          /* position: absolute;
+          z-index: -1; */
+        }
+
         .cameraImg {
-          width: 15%;
+          width: 10%;
           height: 80%;
 
 /* border: solid peru; */
         }
 
         .uploadLabel {
-          margin-left: 5px;
+          margin-left: 10px;
           height: auto;
 
-          margin-bottom: 0;
+          margin-top: 10px;
 /* border: solid red; */
         }
 
@@ -150,8 +160,16 @@ a {
             border-radius: 3px;
             border-style: solid;
 
-            background-color: #EBD0CE;
+            background-color: none;
             color: #545871;
+          }
+
+          /* Toggle buttons implemented using :focus and ~ sibling selectors */
+          .binarySelection:focus {
+            background-color: #EBD0CE;
+          }
+          .binarySelection:focus ~ .binarSelection  {
+            background-color:  none;
           }
 
           .binarySelection {
@@ -205,7 +223,15 @@ a {
           .quadSelection {
             width: 24%;
             font-size: 16px;
-            
+            background-color: none;
+          }
+
+          /* Toggle buttons implemented using :focus and ~ sibling selectors */
+          .quadSelection:focus {
+            background-color: #EBD0CE;
+          }
+          .quadSelection:focus ~ .quadSelection  {
+            background-color:  none;
           }
     
     .backButton {
