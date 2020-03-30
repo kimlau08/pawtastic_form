@@ -25,7 +25,7 @@ a {
 
   .RightFormContainer {
     width: 60%;
-border: solid green;
+/* border: solid green; */
   }
 
     .petBasicsTitle {
@@ -46,7 +46,7 @@ border: solid green;
       width: 80%;
       height: 60%;
 
-border: solid blue;
+/* border: solid blue; */
     }
 
       .nameInputBox, .uploadPhotoBox, .breedInputBox, .birthdayInputBox,
@@ -61,13 +61,20 @@ border: solid blue;
 
         align-self: center;
     
-        border: solid olive;        
+/* border: solid olive;         */
         
       }
 
         .textInput {
           border: solid 1px #E6DBDA;
           border-radius: 5px;
+          font-size: 14px;
+          padding: 8px;
+        }
+
+        ::placeholder {
+          font-size: 14px;
+          color: #EBD0CE;
         }
 
       .uploadPhotoBox {
@@ -82,14 +89,14 @@ border: solid blue;
         margin-top: 22px;
         height: 50px;
 
-border: solid olive;        
+/* border: solid olive;         */
 
       }
         .cameraImg {
           width: 15%;
           height: 80%;
 
-border: solid peru;
+/* border: solid peru; */
         }
 
         .uploadLabel {
@@ -97,7 +104,7 @@ border: solid peru;
           height: auto;
 
           margin-bottom: 0;
-border: solid red;
+/* border: solid red; */
         }
 
       .breedInputBox {
@@ -107,7 +114,7 @@ border: solid red;
         
         align-self: center;
     
-border: solid olive;     
+/* border: solid olive;      */
       }
       
       .birthdayInputBox {
@@ -116,7 +123,7 @@ border: solid olive;
         font-size: 16px;
         align-self: center;
     
-border: solid olive;        
+/* border: solid olive;         */
       }
 
       .genderSelectionBox {
@@ -126,7 +133,7 @@ border: solid olive;
         align-self: center;
     
 
-border: solid olive;     
+/* border: solid olive;      */
       }   
 
         .genderButtonGroup {
@@ -152,7 +159,7 @@ border: solid olive;
         font-size: 16px;
         align-self: center;
     
-border: solid olive;     
+/* border: solid olive;      */
       }
 
         .spayedYesNoGroup {
@@ -174,7 +181,7 @@ border: solid olive;
         font-size: 16px;
         align-self: center;
     
-border: solid olive;     
+/* border: solid olive;      */
       }
 
         .weightButtonGroup {

@@ -26,7 +26,7 @@ export default class RightForm extends Component {
                 <div className="inputContainer">
                     <label className="nameInputBox">
                         Name<br />
-                        <input className="textInput" type="text" value={this.state.name} onChange={this.handleChange} />
+                        <input className="textInput" type="text" value={this.state.name} placeholder="Pet’s name" onChange={this.handleChange} />
                     </label>
                     <div className="uploadPhotoBox">
                        <img className="cameraImg" src={cameraCircleImg} />
@@ -34,12 +34,12 @@ export default class RightForm extends Component {
                     </div>
                     <label className="breedInputBox">
                         Breed<br />
-                        <input className="textInput" type="text" value={this.state.breed} onChange={this.handleChange} />
+                        <input className="textInput" type="text" value={this.state.breed} placeholder="Pet’s breed" onChange={this.handleChange} />
                     </label>
 
                     <label className="birthdayInputBox">
                         Birthday<br />
-                        <input className="textInput" type="text" value={this.state.birthday} onChange={this.handleChange} />
+                        <input className="textInput" type="text" value={this.state.birthday} placeholder="MM/DD/YYYY" onChange={this.handleChange} />
                     </label>
 
                     <label className="genderSelectionBox">
@@ -64,7 +64,7 @@ export default class RightForm extends Component {
                             <input className="quadSelection" type="button" value="Option 1" onChange={this.handleChange} />
                             <input className="quadSelection" type="button" value="Option 2" onChange={this.handleChange} />
                             <input className="quadSelection" type="button" value="Option 3" onChange={this.handleChange} />
-                            <input className="quadSelection" type="button" value="Option4" onChange={this.handleChange} />
+                            <input className="quadSelection" type="button" value="Option 4" onChange={this.handleChange} />
                         </div>
                     </label>
 
