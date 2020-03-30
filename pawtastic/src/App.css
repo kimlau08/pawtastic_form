@@ -48,6 +48,11 @@ border: solid green;
 
 border: solid blue;
     }
+
+      .nameInputBox, .uploadPhotoBox, .breedInputBox, .birthdayInputBox,
+      .genderSelectionBox, .spayedSelectionBox, .weightSelectionBox {
+        color: #9597A6;
+      }
     
       .nameInputBox {
         grid-column: 1/3;
