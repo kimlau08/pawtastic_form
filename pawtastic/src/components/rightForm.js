@@ -16,6 +16,8 @@ export default class RightForm extends Component {
         this.handleBreedChange=this.handleBreedChange.bind(this);
         this.handleBDateChange=this.handleBDateChange.bind(this);
         this.handleGenderClick=this.handleGenderClick.bind(this);
+        this.handleSpayedClick=this.handleSpayedClick.bind(this);
+        this.handleWeightOptionClick=this.handleWeightOptionClick.bind(this);
     }
 
 
@@ -50,6 +52,9 @@ if (dateValue != '') {
     }
     handleSpayedClick(event) {
         this.setState({spayed: event.target.value});
+    }
+    handleWeightOptionClick(event) {
+        this.setState({weight: event.target.value});
     }
 
 
