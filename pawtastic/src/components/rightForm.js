@@ -83,7 +83,7 @@ export default class RightForm extends Component {
     render() {
         return (
             <form className="RightFormContainer">
-                <h2 className="petBasicsTitle">Yay, we love dogs! Give us the basics about your pup.</h2><br /><br />
+                <p className="petBasicsTitle">Yay, we love dogs! Give us the basics about your pup.</p><br />
 
                 <div className="inputContainer">
 
