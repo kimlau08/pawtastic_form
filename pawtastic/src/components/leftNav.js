@@ -13,66 +13,74 @@ export default class LeftNav extends Component {
       this.state={menuSelection: ""};
 
       this.handleMouseOver=this.handleMouseOver.bind(this);
+      this.updatefontColor=this.updatefontColor.bind(this);
+      this.updateZindex=this.updateZindex.bind(this);
+      this.changeSiblingStyling=this.changeSiblingStyling.bind(this);
+    }
+
+
+    updatefontColor=(node, fontColor)=>{  //updater function for font color
+        node.style.color=fontColor;
+    }
+    updateZindex=(node, zIdx)=>{    //updater function for z index
+        node.style.zIndex=zIdx;
+    }
+    changeSiblingStyling(node, styleUpdater, styleAttr) { //update whatever styling needed by the caller
+
+        let sibling=node.parentNode.firstChild;
+        while (sibling) {
+            if (sibling==node) { //It's itself, not sibling
+                sibling=sibling.nextElementSibling;
+                continue;  
+            }
+
+            styleUpdater(sibling, styleAttr); //update whatever styling needed by the caller
+
+            sibling=sibling.nextElementSibling;
+        }
     }
 
     handleMouseOver(e) {
         //Show CCx (ConcentricGroup circles) and change menu item font to whit
         //Restore when mouse over other menu items
 
-        e.target.style.color="white";
+        //update menu state
+        this.setState({menuSelection:  e.target.id});
 
+        //toggle nav bar font color
+        e.target.style.color="white";
+        this.changeSiblingStyling(e.target, this.updatefontColor, '#9597A6')
+        
+        //toggle nav bar bubbles
+        let ccNode;
         switch (e.target.id) {
             case "menuItem0": 
 
-                this.setState({menuSelection: "menuItem0"})
+                ccNode=document.getElementById("CC0");
+                ccNode.style.zIndex=10;
+                this.changeSiblingStyling(ccNode, this.updateZindex, -1)
 
-                document.getElementById("menuItem1").style.color="#9597A6";
-                document.getElementById("menuItem2").style.color="#9597A6";
-                document.getElementById("menuItem3").style.color="#9597A6";
-                
-                document.getElementById("CC0").style.zIndex=10;
-                document.getElementById("CC1").style.zIndex=-1;
-                document.getElementById("CC2").style.zIndex=-1;
-                document.getElementById("CC3").style.zIndex=-1;
                 break;
             case "menuItem1": 
 
-                this.setState({menuSelection: "menuItem1"})
+                ccNode=document.getElementById("CC1");
+                ccNode.style.zIndex=10;
+                this.changeSiblingStyling(ccNode, this.updateZindex, -1)
 
-                document.getElementById("menuItem0").style.color="#9597A6";
-                document.getElementById("menuItem2").style.color="#9597A6";
-                document.getElementById("menuItem3").style.color="#9597A6";
-                
-                document.getElementById("CC0").style.zIndex=-1;
-                document.getElementById("CC1").style.zIndex=10;
-                document.getElementById("CC2").style.zIndex=-1;
-                document.getElementById("CC3").style.zIndex=-1;
                 break;
             case "menuItem2": 
 
-                this.setState({menuSelection: "menuItem2"})
+                ccNode=document.getElementById("CC2");
+                ccNode.style.zIndex=10;
+                this.changeSiblingStyling(ccNode, this.updateZindex, -1);
 
-                document.getElementById("menuItem0").style.color="#9597A6";
-                document.getElementById("menuItem1").style.color="#9597A6";
-                document.getElementById("menuItem3").style.color="#9597A6";
-                
-                document.getElementById("CC0").style.zIndex=-1;
-                document.getElementById("CC1").style.zIndex=-1;
-                document.getElementById("CC2").style.zIndex=10;
-                document.getElementById("CC3").style.zIndex=-1;
                 break;
             case "menuItem3": 
             
-                this.setState({menuSelection: "menuItem3"})
-
-                document.getElementById("menuItem0").style.color="#9597A6";
-                document.getElementById("menuItem1").style.color="#9597A6";
-                document.getElementById("menuItem2").style.color="#9597A6";
-                
-                document.getElementById("CC0").style.zIndex=-1;
-                document.getElementById("CC1").style.zIndex=-1;
-                document.getElementById("CC2").style.zIndex=-1;
-                document.getElementById("CC3").style.zIndex=10;
+                ccNode=document.getElementById("CC3");
+                ccNode.style.zIndex=10;
+                this.changeSiblingStyling(ccNode, this.updateZindex, -1);
+            
                 break;
         }
     }

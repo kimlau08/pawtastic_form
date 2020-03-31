@@ -20,6 +20,7 @@ export default class RightForm extends Component {
         this.handleWeightOptionClick=this.handleWeightOptionClick.bind(this);
         this.switchToDatePicker=this.switchToDatePicker.bind(this);
         this.switchToTextType=this.switchToTextType.bind(this);
+        this.handleBackButtonClick=this.handleBackButtonClick.bind(this);
     }
 
 
@@ -36,14 +37,35 @@ export default class RightForm extends Component {
     handleBDateChange(event) {
         this.setState({birthday: event.target.value}); //update the value state when the form is submitted
     }
+
+    changeSiblingButtonColor(node, buttonColor) {
+
+        let sibling=node.parentNode.firstChild;
+        while (sibling) {
+            if (sibling==node) { //It's itself, not sibling
+                sibling=sibling.nextElementSibling;
+                continue;  
+            }
+
+            sibling.style.backgroundColor=buttonColor; //update color
+
+            sibling=sibling.nextElementSibling;
+        }
+    }
     handleGenderClick(event) {
         this.setState({gender: event.target.value});
+        event.target.style.backgroundColor='#EBD0CE';
+        this.changeSiblingButtonColor(event.target, 'white');
     }
     handleSpayedClick(event) {
         this.setState({spayed: event.target.value});
+        event.target.style.backgroundColor='#EBD0CE';
+        this.changeSiblingButtonColor(event.target, 'white');
     }
     handleWeightOptionClick(event) {
         this.setState({weight: event.target.value});
+        event.target.style.backgroundColor='#EBD0CE';
+        this.changeSiblingButtonColor(event.target, 'white');
     }
 
     switchToDatePicker(event) {
@@ -51,6 +73,10 @@ export default class RightForm extends Component {
     }
     switchToTextType(event) {
         event.target.type="text";
+    }
+
+    handleBackButtonClick(event) {
+        alert(`\nData recorded: \n  Name: ${this.state.name}, Breed: ${this.state.breed}, Birthday: ${this.state.birthday}, Gender: ${this.state.gender}, Spayed: ${this.state.spayed}, Weight: ${this.state.weight} `);
     }
 
 
@@ -94,22 +120,22 @@ export default class RightForm extends Component {
                     <label className="spayedSelectionBox">
                         Spayed or Neutered<br />
                         <div className="spayedYesNoGroup">
-                            <input className="binarySelection" type="button" value="Yes" onChange={this.handleChange} />
-                            <input className="binarySelection" type="button" value="No" onChange={this.handleChange} />
+                            <input className="binarySelection" type="button" value="Yes" onClick={this.handleSpayedClick} />
+                            <input className="binarySelection" type="button" value="No" onClick={this.handleSpayedClick} />
                         </div>
                     </label>
 
                     <label className="weightSelectionBox">
                         Weight<br />
                         <div className="weightButtonGroup">
-                            <input className="quadSelection" type="button" value="Option 1" onChange={this.handleChange} />
-                            <input className="quadSelection" type="button" value="Option 2" onChange={this.handleChange} />
-                            <input className="quadSelection" type="button" value="Option 3" onChange={this.handleChange} />
-                            <input className="quadSelection" type="button" value="Option 4" onChange={this.handleChange} />
+                            <input className="quadSelection" type="button" value="Option 1" onClick={this.handleWeightOptionClick} />
+                            <input className="quadSelection" type="button" value="Option 2" onClick={this.handleWeightOptionClick} />
+                            <input className="quadSelection" type="button" value="Option 3" onClick={this.handleWeightOptionClick} />
+                            <input className="quadSelection" type="button" value="Option 4" onClick={this.handleWeightOptionClick} />
                         </div>
                     </label>
 
-                    <button className="backButton">Back</button>
+                    <button className="backButton" onClick={this.handleBackButtonClick} >Back</button>
                 </div>
             
             </form>

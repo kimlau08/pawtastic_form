@@ -25,7 +25,6 @@ a {
 
   .RightFormContainer {
     width: 60%;
-/* border: solid green; */
   }
 
     .petBasicsTitle {
@@ -45,8 +44,6 @@ a {
 
       width: 80%;
       height: 60%;
-
-/* border: solid blue; */
     }
 
       .nameInputBox, .uploadPhotoBox, .breedInputBox, .birthdayInputBox,
@@ -60,9 +57,6 @@ a {
         font-size: 16px;
 
         align-self: center;
-    
-/* border: solid olive;         */
-        
       }
 
         .textInput {
@@ -88,9 +82,6 @@ a {
 
         margin-top: 22px;
         height: 50px;
-
-/* border: solid olive;         */
-
       }
 
         #filePickerInput {
@@ -105,8 +96,6 @@ a {
         .cameraImg {
           width: 10%;
           height: 80%;
-
-/* border: solid peru; */
         }
 
         .uploadLabel {
@@ -114,7 +103,6 @@ a {
           height: auto;
 
           margin-top: 10px;
-/* border: solid red; */
         }
 
       .breedInputBox {
@@ -123,8 +111,6 @@ a {
         font-size: 16px;
         
         align-self: center;
-    
-/* border: solid olive;      */
       }
       
       .birthdayInputBox {
@@ -132,8 +118,6 @@ a {
         grid-row: 2;
         font-size: 16px;
         align-self: center;
-    
-/* border: solid olive;         */
       }
 
       /* html5 date picker styling */
@@ -147,9 +131,6 @@ a {
         grid-row: 3;
         font-size: 16px;
         align-self: center;
-    
-
-/* border: solid olive;      */
       }   
 
         .genderButtonGroup {
@@ -170,15 +151,6 @@ a {
             color: #545871;
           }
 
-          /* Make button color change stay upon clicking using :focus selector */
-          /* Toggle buttons implemented using :focus and ~ sibling selectors */
-          .binarySelection:focus {
-            background-color: #EBD0CE;
-          }
-          .binarySelection:focus ~ .binarSelection  {
-            background-color:  none;
-          }
-
           .binarySelection {
             width: 50%;
             font-size: 16px;
@@ -190,8 +162,6 @@ a {
         grid-row: 3;
         font-size: 16px;
         align-self: center;
-    
-/* border: solid olive;      */
       }
 
         .spayedYesNoGroup {
@@ -212,8 +182,6 @@ a {
         grid-row: 4;
         font-size: 16px;
         align-self: center;
-    
-/* border: solid olive;      */
       }
 
         .weightButtonGroup {
@@ -231,15 +199,6 @@ a {
             width: 24%;
             font-size: 16px;
             background-color: none;
-          }
-          
-          /* Make button color change stay upon clicking using :focus selector */
-          /* Toggle buttons implemented using :focus and ~ sibling selectors */
-          .quadSelection:focus {
-            background-color: #EBD0CE;
-          }
-          .quadSelection:focus ~ .quadSelection  {
-            background-color:  none;
           }
     
     .backButton {
@@ -353,7 +312,8 @@ a {
     /* border: solid red; */
         }
 
-          #menuItem0, #menuItem1, #menuItem2, #menuItem3 {
+          /* Default font color for class of menu items */
+          .menuItems {
             color: #9597A6;
           }
 
