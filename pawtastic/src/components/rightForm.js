@@ -76,7 +76,7 @@ export default class RightForm extends Component {
     }
 
     handleBackButtonClick(event) {
-        alert(`\nData recorded: \n  Name: ${this.state.name}, Breed: ${this.state.breed}, Birthday: ${this.state.birthday}, Gender: ${this.state.gender}, Spayed: ${this.state.spayed}, Weight: ${this.state.weight} `);
+        alert(`\nData entered: \n  Name: ${this.state.name}, Breed: ${this.state.breed}, Birthday: ${this.state.birthday}, Gender: ${this.state.gender}, Spayed: ${this.state.spayed}, Weight: ${this.state.weight} `);
     }
 
 

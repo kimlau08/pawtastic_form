@@ -23,6 +23,10 @@ a {
   height: auto;
 }
 
+
+  /***************************************************************
+                        Right input form styling 
+   ***************************************************************/
   .RightFormContainer {
     width: 60%;
   }
@@ -89,8 +93,6 @@ a {
           height: 0.1px;
           opacity: 0;
           overflow: hidden;
-          /* position: absolute;
-          z-index: -1; */
         }
 
         .cameraImg {
@@ -220,16 +222,11 @@ a {
    ***************************************************************/
 
   .LefNavContainer {
-
-  /* border: solid purple; */
     width: 40%;
     min-width: 500px;
   }
 
     .dogImgBox {
-
-  /* border: solid green; */
-
       width: 100%;
       position: relative;
     }
@@ -246,8 +243,6 @@ a {
         max-height: 30px;
         display: flex;
         flex-direction: row;
-
-  /* border: solid yellow; */
       }
 
         .logoImg {
@@ -273,14 +268,10 @@ a {
         flex-direction: row;
         width: 40%;
         height: 30%;
-
-  /* border: solid yellow; */
       }
 
         .verticalBubbleBar{
           height: 100%;
-    /* border: solid lime; */
-
           margin-left: 5px;
         }
 
@@ -308,8 +299,6 @@ a {
 
           font-size: 16px;
           margin-left: 15px;
-
-    /* border: solid red; */
         }
 
           /* Default font color for class of menu items */
